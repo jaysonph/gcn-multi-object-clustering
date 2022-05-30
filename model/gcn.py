@@ -1,4 +1,11 @@
+###################################################################
 # Reference: https://github.com/Zhongdao/gcn_clustering
+# A modified version of the reference above
+#
+# File Name: gcn.py
+# Author: Jayson Ng
+# Email: iamjaysonph@gmail.com
+###################################################################
 
 import torch
 import torch.nn as nn

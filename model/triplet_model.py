@@ -1,3 +1,9 @@
+###################################################################
+# File Name: triplet_model.py
+# Author: Jayson Ng
+# Email: iamjaysonph@gmail.com
+###################################################################
+
 import torch
 import torch.nn as nn
 
