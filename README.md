@@ -1,5 +1,27 @@
 # gcn_clustering
-Linkage-based object matching using GCN
+Linkage-based object matching using Graph Convolution Network. One of the advantages of using graph-based approach is that it can make prediction by taking into account of neighbors' information. In this task, we need to predict the relationship between cap, jockey body and saddlecloth bboxes (i.e. which of them belong to the same jockey). Most of the time, these 3 objects are highly overlapped. Given the condition that each jockey can at most have one cap, one body and one saddlecloth, it is possible to group them correctly by looking at neighbors' group (e.g. Given 2 caps placing close to a jockey, if one of them is taken by the neighbor, then we know the other remaining cap should probably be the correct one.). The experimental results show the robustness of this graph-based approach in this challenging object grouping/clustering task.
+
+# Usage
+1. Prepare data for triplet model
+```
+Run prepare_triplet_data.ipynb
+```
+2. Train triplet model on the triplet data
+```
+Run triplet_train.ipynb
+```
+3. Use the best triplet weight to extract graph data
+```
+Run extract_graph_data.ipynb
+```
+4. Train the GCN
+```
+python train.py
+```
+5. See the prediction result
+```
+Run Prediction.ipynb
+```
 
 
 # Visualization
